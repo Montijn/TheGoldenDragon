@@ -38,7 +38,7 @@
             <img style="vertical-align: middle;" src="../pictures/dragon-small.png" alt="Golden Dragon" height="50px">
             <span style="font-family:'chinese_takeawayregular'">De Gouden Draak</span>
             <img style="vertical-align: middle;" src="../pictures/dragon-small-flipped.png" alt="Golden Dragon" height="50px">
-        </td>
+        </td>    
     </tr>
 </table>
 <table id="main_table" style="padding:5px;width:100%;border-collapse: collapse">
