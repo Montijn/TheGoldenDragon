@@ -2,89 +2,75 @@
 <html>
 <head>
     <title>The Golden Dragon</title>
-    <style>
-        body {background-color: darkred; margin: 15px; margin-left: 50px; margin-right: 50px}
-        td {padding: 0px;}
-
-        @font-face {
-            font-family: 'chinese_takeawayregular';
-            src: url('fonts/chinesetakeaway-webfont.woff2') format('woff2'),
-            url('fonts/chinesetakeaway-webfont.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        a {text-decoration: none;
-            color: yellow;}
-    </style>
+    <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
 </head>
 
 <body>
-<table id="main_table" style="padding:5px;width:100%;border-collapse: collapse">
-    <tr style="height:50px;background-color:red">
-        <td style="text-align:center;width:30%;color:yellow;font-size:30px">
-            <img style="vertical-align: middle;" src="pictures/dragon-small.png" alt="Golden Dragon" height="50px">
-            <span style="font-family:'chinese_takeawayregular'">De Gouden Draak</span>
-            <img style="vertical-align: middle;" src="pictures/dragon-small-flipped.png" alt="Golden Dragon" height="50px">
+<table class="main_table">
+    <tr class="main_tr" >
+        <td class="td_image"  >
+            <img src="pictures/dragon-small.png" alt="Golden Dragon" height="50px">
+            <span >De Gouden Draak</span>
+            <img src="pictures/dragon-small-flipped.png" alt="Golden Dragon" height="50px">
         </td>
         <td>
-            <a href="paginas/aanbiedingen.html" style="color:yellow;font-weight:bold;text-decoration: none;">
-                <marquee behavior="scroll" direction="left">
-                    Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!
-                </marquee>
+            <a href="paginas/aanbiedingen.html" id="sidescroller">
+                <div class="marquee">
+                    <p>Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!</p>
+                </div>
             </a>
         </td>
-        <td style="text-align:center;width:30%;color:yellow;font-size:30px">
-            <img style="vertical-align: middle;" src="pictures/dragon-small.png" alt="Golden Dragon" height="50px">
-            <span style="font-family:'chinese_takeawayregular'">De Gouden Draak</span>
-            <img style="vertical-align: middle;" src="pictures/dragon-small-flipped.png" alt="Golden Dragon" height="50px">
+        <td class="td_image" >
+            <img src="pictures/dragon-small.png" alt="Golden Dragon" height="50px">
+            <span>De Gouden Draak</span>
+            <img src="pictures/dragon-small-flipped.png" alt="Golden Dragon" height="50px">
         </td>
     </tr>
 </table>
-<table id="main_table" style="padding:5px;width:100%;border-collapse: collapse">
-    <tr style="height:7px;background-color:red">
+<table class="main_table">
+    <tr class="border_tr">
         <td colspan="9">
         </td>
     <tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
         </td>
-        <td style="width:25px;border-left:4px solid yellow;border-top:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-top:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="border-top:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-left:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-left:4px solid yellow;border-top:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-top:4px solid yellow"></td>
+        <td class="left_top_td" ></td>
+        <td class="right_top_td" ></td>
+        <td class="right_bottom_td" ></td>
+        <td class="top_bottom_td"></td>
+        <td class="left_bottom_td" ></td>
+        <td class="left_top_td"></td>
+        <td class="right_top_td" ></td>
         <td width="7px">
     </tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
-        <td style="width:25px;border-left:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
+        <td class="left_bottom_td" ></td>
+        <td class="basic_td"></td>
+        <td class="basic_td"></td>
         <td></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-bottom:4px solid yellow"></td>
+        <td class="basic_td"></td>
+        <td class="basic_td"></td>
+        <td class="right_bottom_td"></td>
         <td width="7px">
     </tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
-        <td style="width:25px;border-right:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px"></td>
+        <td class="right_bottom_td" ></td>
+        <td class="basic_td"></td>
+        <td class="width_td"></td>
         <td></td>
-        <td style="width:25px"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border-bottom:4px solid yellow"></td>
+        <td class="width_td">></td>
+        <td class="basic_td"></td>
+        <td class="bottom_td" ></td>
         <td width="7px">
     </tr>
-    <tr style="height:50px;background-color:red">
+    <tr class="main_tr">
         <td width="7px">
-        <td style="width:25px;border-right:4px solid yellow;border-left:4px solid yellow"></td>
-        <td style="width:25px;"></td>
-        <td style="width:25px;"></td>
+        <td class="right_left_td"></td>
+        <td class="width_td"></td>
+        <td class="width_td"></td>
         <td style="text-align:center">
             <!-- CONTENT HERE! -->
             <table width=100%>
@@ -178,46 +164,46 @@
             <br>
             <div text-align="center"><a href="paginas/contact_new.html">Naar Contact</a></div>
         </td>
-        <td style="width:25px;"></td>
-        <td style="width:25px;"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-left:4px solid yellow"></td>
+        <td class="width_td"></td>
+        <td class="width_td"></td>
+        <td class="right_left_td"></td>
         <td width="7px">
     </tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
-        <td style="width:25px;border-right:4px solid yellow;border-top:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px"></td>
+        <td class="right_top_td" ></td>
+        <td class="basic_td"></td>
+        <td class="width_td">></td>
         <td></td>
-        <td style="width:25px"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border-top:4px solid yellow"></td>
+        <td class="width_td">></td>
+        <td class="basic_td"></td>
+        <td class="left_top_td"></td>
         <td width="7px">
     </tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
-        <td style="width:25px;border-left:4px solid yellow;border-top:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
+        <td class="left_top_td"></td>
+        <td class="basic_td"></td>
+        <td class="basic_td"></td>
         <td></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-top:4px solid yellow"></td>
+        <td class="basic_td"></td>
+        <td class="basic_td"></td>
+        <td class="right_top_td" ></td>
         <td width="7px">
     </tr>
-    <tr style="height:25px;background-color:red">
+    <tr class="basic_tr" >
         <td width="7px">
         </td>
-        <td style="width:25px;border-left:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow"></td>
-        <td style="border-top:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-left:4px solid yellow;"></td>
-        <td style="width:25px;border-left:4px solid yellow;border-bottom:4px solid yellow"></td>
-        <td style="width:25px;border-right:4px solid yellow;border-bottom:4px solid yellow"></td>
+        <td class="left_bottom_td" ></td>
+        <td class="right_bottom_td" ></td>
+        <td class="right_td"></td>
+        <td class="top_bottom_td"></td>
+        <td class="left_td" ></td>
+        <td class="left_bottom_td" ></td>
+        <td class="right_bottom_td" ></td>
         <td width="7px">
     </tr>
-    <tr style="height:7px;background-color:red">
+    <tr class="border_tr">
         <td colspan="9">
         </td>
     <tr>
