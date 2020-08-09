@@ -125,6 +125,52 @@ a {
     width:25px;
     border-left:4px solid yellow;
 }
+.border_td{
+    width:7px;
+}
+
+.img_left{
+    float:left;
+    height:200px
+}
+
+.img_right{
+    float:right;
+    height:200px
+}
+
+.main_text{
+    font-weight:bold;
+    color:yellow
+}
+
+#name span:first-of-type{
+    font-size:40px;
+
+}
+#name span:nth-of-type(2){
+    font-size:50px;
+
+}
+
+#menu{
+    display:flex;
+    justify-content: center;
+}
+.menuitem{
+   margin: 5px;
+    font-size:20px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.main_menu{
+    width:100%;
+}
+
+
+
 
 
 

@@ -33,7 +33,7 @@
         </td>
     <tr>
     <tr class="basic_tr" >
-        <td width="7px">
+        <td class="border_td">
         </td>
         <td class="left_top_td" ></td>
         <td class="right_top_td" ></td>
@@ -42,10 +42,10 @@
         <td class="left_bottom_td" ></td>
         <td class="left_top_td"></td>
         <td class="right_top_td" ></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="basic_tr" >
-        <td width="7px">
+        <td class="border_td">
         <td class="left_bottom_td" ></td>
         <td class="basic_td"></td>
         <td class="basic_td"></td>
@@ -53,10 +53,10 @@
         <td class="basic_td"></td>
         <td class="basic_td"></td>
         <td class="right_bottom_td"></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="basic_tr" >
-        <td width="7px">
+        <td class="border_td" >
         <td class="right_bottom_td" ></td>
         <td class="basic_td"></td>
         <td class="width_td"></td>
@@ -64,62 +64,54 @@
         <td class="width_td"></td>
         <td class="basic_td"></td>
         <td class="bottom_td" ></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="main_tr">
-        <td width="7px">
+        <td class="border_td">
         <td class="right_left_td"></td>
         <td class="width_td"></td>
         <td class="width_td"></td>
         <td style="text-align:center">
-            <!-- CONTENT HERE! -->
-            <table width=100%>
+            <table class="main_menu">
                 <tr>
                     <td colspan='3'>
-                        <p>
-                            <img src="pictures/dragon-small.png" style="float:left;height:200px" alt="Golden Dragon">
-                            <img src="pictures/dragon-small-flipped.png" style="float:right;height:200px" alt="Golden Dragon">
-                            <span style="font-size:40px;font-weight:bold;color:yellow">Chinees Indische Specialiteiten</span><br>
-                            <span style="font-size:50px;font-weight:bold;color:yellow">De Gouden Draak</span><br>
+                        <p id="name">
+                            <img class="img_left" src="pictures/dragon-small.png" alt="Golden Dragon">
+                            <img class="img_right" src="pictures/dragon-small-flipped.png" alt="Golden Dragon">
+                            <span class="main_text" >Chinees Indische Specialiteiten</span><br>
+                            <span class="main_text">De Gouden Draak</span><br>
                         </p>
-                        <p>
-                        <table style="margin:auto;font-size:20px;color:white" border="1px solid white">
-                            <tr background="pictures/menu_bg_gradient.png">
-                                <td valign="middle">
-                                    <a href="paginas/MENUKAART.html" style="color:white">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menukaart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </a>
-                                </td>
-                                <td valign="middle">
-                                    <a href="paginas/news.html" style="color:white">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nieuws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </a>
-                                </td>
-                                <td valign="middle">
-                                    <a href="paginas/contact.html" style="color:white">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        </p>
+                        <div id="menu">
+                            <div class="menuitem">
+                                <a>
+                                   Menukaart
+                                </a>
+                            </div>
+
+                            <div class="menuitem">
+                                <a >
+                                    Nieuws
+                                </a>
+                            </div>
+                            <div class="menuitem">
+                                <a >
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
                     </td>
                 </tr>
-                <tr style="padding-top:50px">
-                    <td colspan="3" height="50px">
-                    </td>
-                </tr>
+{{--            CONTENT HERE--}}
             </table>
             <br>
-            <div text-align="center"><a href="paginas/contact_new.html">Naar Contact</a></div>
         </td>
         <td class="width_td"></td>
         <td class="width_td"></td>
         <td class="right_left_td"></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="basic_tr" >
-        <td width="7px">
+        <td class="border_td">
         <td class="right_top_td" ></td>
         <td class="basic_td"></td>
         <td class="width_td"></td>
@@ -127,10 +119,10 @@
         <td class="width_td"></td>
         <td class="basic_td"></td>
         <td class="left_top_td"></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="basic_tr" >
-        <td width="7px">
+        <td class="border_td">
         <td class="left_top_td"></td>
         <td class="basic_td"></td>
         <td class="basic_td"></td>
@@ -138,11 +130,10 @@
         <td class="basic_td"></td>
         <td class="basic_td"></td>
         <td class="right_top_td" ></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="basic_tr" >
-        <td width="7px">
-        </td>
+        <td class="border_td"> </td>
         <td class="left_bottom_td" ></td>
         <td class="right_bottom_td" ></td>
         <td class="right_td"></td>
@@ -150,7 +141,7 @@
         <td class="left_td" ></td>
         <td class="left_bottom_td" ></td>
         <td class="right_bottom_td" ></td>
-        <td width="7px">
+        <td class="border_td">
     </tr>
     <tr class="border_tr">
         <td colspan="9">
