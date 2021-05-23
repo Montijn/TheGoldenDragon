@@ -31,12 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="358dc76b-17ac-4637-8362-44046f685952" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/database/migrations/2021_05_23_105045_create_dish_types_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2021_05_23_105400_create_menu_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/database/migrations/2021_05_23_105400_create_menu_items_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +175,7 @@
       <updated>1621682643088</updated>
       <workItem from="1621682644232" duration="786000" />
       <workItem from="1621766478617" duration="1357000" />
-      <workItem from="1621767891027" duration="2166000" />
+      <workItem from="1621767891027" duration="2664000" />
     </task>
     <servers />
   </component>

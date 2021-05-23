@@ -15,7 +15,8 @@ class CreateMenuItemsTable extends Migration
     {
         Schema::create('menu_items', function (Blueprint $table) {
             $table->id();
-            $table->string('menu_code', 3);
+            $table->integer('menu_code');
+            $table->string('menu_code_addition', 1);
             $table->string('name', 70);
             $table->double('price');
             $table->string('description', 200);
