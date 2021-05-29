@@ -13,7 +13,6 @@
 
 <div id='menuBar'>
     <img id="logo"  src="{{asset('pictures/goodpay.png')}}" alt="goodpay logo">
-
     <div id='buttonBar'>
         @if(Auth::user())
         <button id='cashDeskBtn' class='menuButton'>
@@ -26,12 +25,10 @@
         <button id='salesBtn' class='menuButton'>
             Verkoop Overzicht
         </button>
-
-        <a class='menuLink' href='logout.php'>
-            <div class='menuButton'>
-                Log Uit
-            </div>
-        </a>
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button class="menuButton">Uitloggen</button>
+        </form>
         @endif
     </div>
 </div>

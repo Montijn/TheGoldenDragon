@@ -14,7 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->integer('employee_Nr')->unique();
+            $table->id();
+            $table->string('email')->unique();
             $table->string('password');
             $table->boolean('is_Admin')->default(false);
             $table->timestamps();

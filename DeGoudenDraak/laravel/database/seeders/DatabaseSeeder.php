@@ -18,8 +18,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         User::create([
-            'employee_Nr' => 1,
+            'email' => 'admin@gouden-draak.nl',
             'password' => Hash::make('wachtwoord'),
+            'is_admin' => true,
         ]);
     }
 }
