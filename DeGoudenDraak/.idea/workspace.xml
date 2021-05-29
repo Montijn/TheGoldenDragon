@@ -31,20 +31,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="358dc76b-17ac-4637-8362-44046f685952" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/CHINESETAKEAWAY.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinese.msyh.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinesetakeaway-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinesetakeaway-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2021_05_23_104505_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/database/migrations/2021_05_23_104505_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/cashDesk.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/cashDesk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/css/sales.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/sales.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/cashDesk.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/cashDesk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/sales.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +189,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/public" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\verwe\Documents\GitHub\TheGoldenDragon\DeGoudenDraak\laravel\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\verwe\Documents\GitHub\TheGoldenDragon\DeGoudenDraak\laravel\public" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -209,9 +230,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1622295104698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622295104698" />
     <state x="1920" y="69" width="1380" height="697" maximized="true" key="dock-window-1" timestamp="1622288095230">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1920" y="69" width="1380" height="697" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622288095230" />
+    <state x="1920" y="63" width="1380" height="697" key="dock-window-2" timestamp="1622296829284">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="63" width="1380" height="697" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622296829284" />
   </component>
 </project>
