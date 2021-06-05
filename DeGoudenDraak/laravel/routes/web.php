@@ -14,6 +14,10 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+
+
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 
@@ -22,3 +26,7 @@ Route::get('/', function () {
 Route::get('/news', [NewsController::class, 'index']) ->name("news");
 Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
 
+    return view('login');
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
