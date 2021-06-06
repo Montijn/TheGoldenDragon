@@ -18,9 +18,9 @@ class CreateMenuItemsTable extends Migration
             $table->integer('menu_code');
             $table->string('menu_code_addition', 1);
             $table->string('name', 70);
-            $table->double('price');
+            $table->decimal('price', 5, 2);
             $table->string('description', 200);
-            $table->bigInteger('dish_type')->unsigned();
+            $table->bigInteger('dish_type')->unsigned()->nullable();
             $table->foreign('dish_type')->references('id')->on('dish_types');
         });
     }
