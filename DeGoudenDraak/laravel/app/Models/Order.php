@@ -10,6 +10,6 @@ class Order extends Model
 
     public function Menu_Items()
     {
-        return $this->hasMany(Menu_Item::class);
+        return $this->hasMany(MenuItem::class);
     }
 }

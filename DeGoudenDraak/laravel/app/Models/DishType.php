@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rice_Choice extends Model
+class DishType extends Model
 {
+
     protected $fillable = [
-        'name', 'extra_price'
+        'name',
     ];
 
-    public function Special_Offers()
+    public function Menu_Items()
     {
-        return $this->belongsTo(Special_Offer::class, 'rice_choice_id');
+        return $this->hasMany(MenuItem::class);
     }
 }

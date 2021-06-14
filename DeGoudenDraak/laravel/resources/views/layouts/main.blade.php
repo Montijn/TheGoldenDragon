@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>The Golden Dragon</title>
+
+    <!-- Styles -->
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+
 </head>
 <style>
     body {background-color: darkred; margin: 15px; margin-left: 50px; margin-right: 50px}
@@ -29,7 +32,7 @@
                 <a class="nav-link" href="{{Route("news")}}" >News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{Route("news")}}" >Menu</a>
+                <a class="nav-link" href="{{Route("menu")}}" >Menu</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{Route("contact")}}" >Contact</a>
@@ -107,7 +110,6 @@
                 </tr>
             </table>
             <br>
-            <div text-align="center"><a href="contact_new.html">Naar Contact</a></div>
         </td>
         <td style="width:25px;"></td>
         <td style="width:25px;"></td>

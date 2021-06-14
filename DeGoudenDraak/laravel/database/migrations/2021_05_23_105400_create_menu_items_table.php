@@ -22,6 +22,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('description', 200);
             $table->bigInteger('dish_type')->unsigned();
             $table->foreign('dish_type')->references('id')->on('dish_types');
+            $table->timestamps();
         });
     }
 

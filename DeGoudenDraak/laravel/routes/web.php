@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ContactController;
-/*
+/*S
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -20,13 +20,17 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
 
-})->name("home");
 
 Route::get('/news', [NewsController::class, 'index']) ->name("news");
 Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
+Route::get('/menu', [MenuController::class, 'index']) -> name("menu");
+Route::get('/addmenuitem', [MenuController::class, 'create']) -> name("addmenuitem");
 
+Route::resource('menuoverview', MenuController::class);
+
+/*Route::get('/', function () {
     return view('login');
-});
+});*/
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
