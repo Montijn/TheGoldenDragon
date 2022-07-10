@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CashDeskController;
+use App\Http\Livewire\CashDesk;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ContactController;
@@ -26,7 +28,7 @@ Route::get('/', function () {
 Route::get('/news', [NewsController::class, 'index']) ->name("news");
 Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
 
-    return view('login');
-});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/cashdesk', [CashDeskController::class, 'index']);

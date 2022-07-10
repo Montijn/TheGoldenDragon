@@ -16,7 +16,6 @@
     <link rel='stylesheet' type='text/css' href="{{asset('/css/menu.css')}}">
     <link rel='stylesheet' type='text/css' href="{{asset('/css/sales.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-
     <!-- Scripts -->
     <script src="{{asset('/js/cashDesk.js')}}" defer></script>
     <script src="{{asset('/js/header.js')}}" defer></script>
@@ -31,5 +30,6 @@
         <main>
             @yield('content')
         </main>
+        <script src="{{asset('/js/app.js')}}"></script>
     </body>
 </html>

@@ -31,32 +31,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="358dc76b-17ac-4637-8362-44046f685952" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/CHINESETAKEAWAY.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinese.msyh.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinesetakeaway-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/fonts/chinesetakeaway-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/app/Http/Livewire/CashDesk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/public/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/js/components/CreateOrder.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/js/components/MenuItems.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/cashdesk/cashDesk.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/livewire/cash-desk.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeGoudenDraak.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/cashDesk.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/cashDesk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/css/sales.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/sales.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/cashDesk.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/cashDesk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/sales.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/sales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CashDeskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CashDeskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/public/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +62,14 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/laravel/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -178,6 +182,7 @@
       <path value="$PROJECT_DIR$/laravel/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/laravel/vendor/psr/container" />
       <path value="$PROJECT_DIR$/laravel/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="ProjectId" id="1stCkdJmLVov19NWEqR6iat3Bjj" />
@@ -190,13 +195,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/public" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\verwe\Documents\GitHub\TheGoldenDragon\DeGoudenDraak\laravel\resources\views\cashdesk" />
       <recent name="C:\Users\verwe\Documents\GitHub\TheGoldenDragon\DeGoudenDraak\laravel\public" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\verwe\Documents\GitHub\TheGoldenDragon\DeGoudenDraak\laravel\public" />
     </key>
   </component>
@@ -211,6 +219,12 @@
       <workItem from="1621682644232" duration="786000" />
       <workItem from="1621766478617" duration="1357000" />
       <workItem from="1621767891027" duration="2664000" />
+      <workItem from="1623492895244" duration="10760000" />
+      <workItem from="1623660719663" duration="50000" />
+      <workItem from="1651490409198" duration="14150000" />
+      <workItem from="1651580854069" duration="3566000" />
+      <workItem from="1651657986203" duration="11308000" />
+      <workItem from="1651834413863" duration="4559000" />
     </task>
     <servers />
   </component>
@@ -230,17 +244,28 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1622295104698">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1651677054506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622295104698" />
-    <state x="1920" y="69" width="1380" height="697" maximized="true" key="dock-window-1" timestamp="1622288095230">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651677054506" />
+    <state x="1965" y="-13" width="1293" height="643" maximized="true" key="dock-window-1" timestamp="1651666895997">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1920" y="69" width="1380" height="697" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622288095230" />
-    <state x="1920" y="63" width="1380" height="697" key="dock-window-2" timestamp="1622296829284">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="1965" y="-13" width="1293" height="643" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651666895997" />
+    <state x="620" y="156" width="1293" height="643" key="dock-window-2" timestamp="1651674195087">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1920" y="63" width="1380" height="697" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622296829284" />
+    <state x="620" y="156" width="1293" height="643" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651674195087" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/laravel/resources/views/layouts/main.blade.php</url>
+          <line>65</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

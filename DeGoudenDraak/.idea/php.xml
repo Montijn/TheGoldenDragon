@@ -108,6 +108,7 @@
       <path value="$PROJECT_DIR$/laravel/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/laravel/vendor/psr/container" />
       <path value="$PROJECT_DIR$/laravel/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
