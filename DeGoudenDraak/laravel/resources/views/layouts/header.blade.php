@@ -3,9 +3,12 @@
     <div id='buttonBar'>
         @if(Auth::user())
             <div class="list-inline-item">
-                <button id='cashDeskBtn' class='menuButton'>
-                    Kassa
-                </button>
+                <form action="{{route('cashdesk')}}" method="GET">
+                    @csrf
+                    <button id='cashDeskBtn' class='menuButton'>
+                        Kassa
+                    </button>
+                </form>
             </div>
             <div class="list-inline-item">
                 <button id='menuBtn' class='menuButton'>
