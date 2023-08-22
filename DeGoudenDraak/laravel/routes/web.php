@@ -16,7 +16,9 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-
+Route::get('/login', function () {
+    return view('login');
+});
 
 Auth::routes();
 
@@ -32,3 +34,7 @@ Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/cashdesk', [CashDeskController::class, 'index']);
+// View routes for the normal website
+Route::get('/', function (){
+    return view('website.homepage');
+});
