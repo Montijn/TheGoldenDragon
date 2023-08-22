@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'chinese_takeawayregular';
+    src: url('../../fonts/chinesetakeaway-webfont.woff') format('woff'),
+        url('../../fonts/chinesetakeaway-webfont.woff2') format('woff2');
+}
+
+body {
+    background-color: darkred;
+    margin: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.styled-text {
+    font-family: chinese_takeawayregular;
+}
+
+.page-content {
+    background-color: red;
+    display: block;
+    height: auto;
+}
+
+.main-content {
+    background-color: red;
+
+}
+
+.main-content > div {
+    border: yellow solid 4px;
+}
+
+.img-small {
+    width: 50px;
+    height: auto;
+}
+
+.img-medium {
+    width: 100px;
+    height: auto;
+}
+
+.img-reverse {
+    transform: scaleX(-1);
+}
+
+.banner {
+    overflow: hidden;
+}
+.banner-text {
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
