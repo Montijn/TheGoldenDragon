@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu_Item extends Model
+class MenuItem extends Model
 {
     protected $fillable = [
         'menu_code', 'menu_code_addition', 'name', 'price', 'description',
@@ -18,7 +18,7 @@ class Menu_Item extends Model
 
     public function Dish_Type()
     {
-        return $this->hasOne(Dish_Type::class);
+        return $this->hasOne(DishType::class);
     }
 
     public function Special_Offers()

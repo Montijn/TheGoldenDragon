@@ -25,3 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function (){
     return view('website.homepage');
 });
+Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'show'])->name('menu');
+Route::get('/pdf', [\App\Http\Controllers\PdfController::class, 'download']);
+
+
+// Admin routes
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'show'])->name('admin');
+
+// Tablet view
+Route::get('/tablet', [\App\Http\Controllers\TabletController::class, 'show']);
+
