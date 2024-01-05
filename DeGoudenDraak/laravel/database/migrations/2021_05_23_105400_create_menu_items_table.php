@@ -20,6 +20,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('name', 70);
             $table->decimal('price', 5, 2);
             $table->string('description', 200);
+            $table->timestamps();
             $table->bigInteger('dish_type')->unsigned()->nullable();
             $table->foreign('dish_type')->references('id')->on('dish_types');
         });

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('website.layouts.website-layout')
 @section('content')
     <h3>Al jaren is De Gouden Draak een begrip als het gaat om de beste afhaalgerechten in 's-Hertogenbosch.<br>
         Graag trakteren we u op authentieke gerechten uit de Cantonese keuken.</h3>

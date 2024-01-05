@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CashDeskController;
+use App\Http\Controllers\MenuController;
 use App\Http\Livewire\CashDesk;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
@@ -29,11 +30,13 @@ Route::get('/', function () {
 
 Route::get('/news', [NewsController::class, 'index']) ->name("news");
 Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
-
-
+Route::get('/menu', [MenuController::class, 'index']) -> name("menu");
+Route::get('/addmenuitem', [MenuController::class, 'create']) -> name("addmenuitem");
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/cashdesk', [CashDeskController::class, 'index']);
+
+Route::resource('menuoverview', MenuController::class);
 // View routes for the normal website
 Route::get('/', function (){
     return view('website.homepage');

@@ -60,8 +60,9 @@
         </div>
     </div>
 
-    <div class="row col-md-12">
 
+    <div class="row col-md-12">
+        @yield('content')
     </div>
 {{--<table id="main_table" style="padding:5px;width:100%;border-collapse: collapse">
     <tr style="height:7px;background-color:red">

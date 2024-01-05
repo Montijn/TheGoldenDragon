@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('website.layouts.website-layout')
 
 @section('content')
     <h3>De Gouden Draak is eenvoudig te vinden, vlak bij het centrum, 5 minuten lopen achter het centraal station.

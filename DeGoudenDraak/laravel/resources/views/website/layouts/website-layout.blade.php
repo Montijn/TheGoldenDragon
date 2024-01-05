@@ -35,9 +35,15 @@
                                 <p class="h2">De Gouden Draak</p>
                             </div>
                             <div class="btn-group btn-group-sm" role="group">
-                                <button type="button" class="btn btn-secondary">Menukaart</button>
-                                <button type="button" class="btn btn-secondary">Nieuws</button>
-                                <button type="button" class="btn btn-secondary">Contact</button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ Route('menu') }}" class="nav-link">Menukaart</a>
+                                </button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ Route('news') }}" class="nav-link">Nieuws</a>
+                                </button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ Route('contact') }}" class="nav-link">Contact</a>
+                                </button>
                             </div>
                         </div>
                         <div class="col-lg-2">
@@ -45,12 +51,13 @@
                         </div>
                     </div>
                     <div>
-                        @yield('content')
+
                     </div>
                 </div>
 
             </div>
         </div>
+        @yield('content')
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
