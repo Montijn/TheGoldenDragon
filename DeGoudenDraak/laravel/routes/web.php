@@ -31,11 +31,15 @@ Route::get('/', function () {
 Route::get('/news', [NewsController::class, 'index']) ->name("news");
 Route::get('/contact', [ContactController::class, 'index']) ->name("contact");
 Route::get('/menu', [MenuController::class, 'index']) -> name("menu");
+Route::get('/favorite/add/{menuItemId}', [MenuController::class, 'addFavorite'])->name('favorite.add');
+Route::get('/favorites', [MenuController::class, 'getFavorites'])->name('favorites');
+Route::get('/favorite/remove/{menuItemId}', [MenuController::class, 'removeFavorite'])->name('favorite.remove');
 Route::get('/addmenuitem', [MenuController::class, 'create']) -> name("addmenuitem");
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/cashdesk', [CashDeskController::class, 'index']);
-
+Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
+Route::post('/news', [NewsController::class, 'store'])->name('news.store');
 Route::resource('menuoverview', MenuController::class);
 // View routes for the normal website
 Route::get('/', function (){

@@ -8,16 +8,17 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\View\View;
 
 class MenuController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-
         $menuItems = MenuItem::orderBy("dish_type", "ASC")->get();
+        $favorites = unserialize($request->cookie('favorites', 'a:0:{}'));
 
-        return view('menu', compact('menuItems'));
+        return view('menu', compact('menuItems', 'favorites'));
     }
 
     /**
@@ -50,4 +51,39 @@ class MenuController extends Controller
             ]);
         return redirect('/menu');
     }
+    public function addFavorite($menuItemId, Request $request)
+    {
+        $menuItem = MenuItem::find($menuItemId);
+        $favorites = unserialize($request->cookie('favorites', 'a:0:{}'));
+        $favorites[] = $menuItem->id;
+        $serializedFavorites = serialize($favorites);
+
+        return redirect('/menu')->withCookie(Cookie::forever('favorites', $serializedFavorites));
+    }
+
+    public function getFavorites(Request $request)
+    {
+
+        $serializedFavorites = $request->cookie('favorites', 'a:0:{}');
+        $favorites = unserialize($serializedFavorites);
+        $favoriteMenuItems = MenuItem::whereIn('id', $favorites)->get();
+
+        return view('favorites', compact('favoriteMenuItems'));
+    }
+
+    public function removeFavorite($menuItemId, Request $request)
+    {
+        $menuItem = MenuItem::find($menuItemId);
+        $favorites = unserialize($request->cookie('favorites', 'a:0:{}'));
+        $key = array_search($menuItem->id, $favorites);
+
+        if ($key !== false) {
+            unset($favorites[$key]);
+        }
+
+        $serializedFavorites = serialize($favorites);
+
+        return redirect('/menu')->withCookie(cookie()->forever('favorites', $serializedFavorites));
+    }
+
 }
