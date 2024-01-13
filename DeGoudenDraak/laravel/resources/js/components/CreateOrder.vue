@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="text-center">Bestelling plaatsen</h3>
+        <h3 class="text-center">Testtest</h3>
         <div class="row">
             <div class="col-md-6">
                 <table class="table">
@@ -23,7 +23,7 @@ export default {
     },
     created() {
         this.axios
-            .get('http://localhost:8000/api/orders/')
+            .get('http://localhost:8000/api/orders')
             .then(response =>
                 this.items = response.data
             );

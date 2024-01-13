@@ -17,6 +17,7 @@ class CreateOrdersHasMenuItemsTable extends Migration
             $table->bigInteger('orders_id')->unsigned();
             $table->bigInteger('menu_items_id')->unsigned();
             $table->integer('amount');
+            $table->decimal('price', 6, 2);
             $table->foreign('orders_id')->references('id')->on('orders');
             $table->foreign('menu_items_id')->references('id')->on('menu_items');
         });

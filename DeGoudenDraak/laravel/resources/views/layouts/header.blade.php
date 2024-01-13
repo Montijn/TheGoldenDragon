@@ -3,19 +3,28 @@
     <div id='buttonBar'>
         @if(Auth::user())
             <div class="list-inline-item">
+                <form action="{{route('cashdesk.order.create')}}" method="GET">
+                    @csrf
                 <button id='cashDeskBtn' class='menuButton'>
-                    Kassa
+                    Maak bestelling
                 </button>
+                </form>
             </div>
             <div class="list-inline-item">
+                <form action="{{route('logout')}}" method="GET">
+                    @csrf
                 <button id='menuBtn' class='menuButton'>
                     Gerechten
                 </button>
+                </form>
             </div>
             <div class="list-inline-item">
+                <form action="{{route('logout')}}" method="GET">
+                    @csrf
                 <button id='salesBtn' class='menuButton'>
                     Verkoop Overzicht
                 </button>
+                </form>
             </div>
             <div class="list-inline-item">
                 <form action="{{route('logout')}}" method="POST">

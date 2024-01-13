@@ -29,4 +29,35 @@ class NewsController extends Controller
 
         return redirect('/news')->with('success', 'News item created successfully.');
     }
+
+    public function edit($id)
+    {
+        $newsItem = News::findOrFail($id);
+        return view('edit-news', compact('newsItem'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
+        $newsItem = News::findOrFail($id);
+
+        $newsItem->update([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+        ]);
+
+        return redirect('/news')->with('success', 'News item updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $newsItem = News::findOrFail($id);
+        $newsItem->delete();
+
+        return redirect('/news')->with('success', 'News item deleted successfully.');
+    }
 }

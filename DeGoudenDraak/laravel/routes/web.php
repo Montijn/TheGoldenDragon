@@ -38,6 +38,10 @@ Route::get('/addmenuitem', [MenuController::class, 'create']) -> name("addmenuit
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/cashdesk', [CashDeskController::class, 'index']);
+Route::get('/cashdesk/order/create', [CashDeskController::class, 'orderCreate'])->name('cashdesk.order.create');
+Route::get('/cashdesk/order/create/{menuItemId}', [CashDeskController::class, 'addToOrder'])->name('cashdesk.order.addtoorder');
+Route::post('/cashdesk/order/create', [CashDeskController::class, 'orderStore'])->name('cashdesk.order.store');
+
 Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
 Route::post('/news', [NewsController::class, 'store'])->name('news.store');
 Route::resource('menuoverview', MenuController::class);

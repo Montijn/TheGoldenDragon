@@ -6,7 +6,7 @@
 
 @section('content')
     <div id="app">
-        <create-order></create-order>
+        Test
     </div>
 
 {{--    <div>
