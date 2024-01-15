@@ -26,37 +26,53 @@
                             </form>
                         </div>
                         @if($searchResult->isNotEmpty())
-                            @foreach ($searchResult as $result)
-                                <div class="card mb-3">
-                                    <div class="card-body d-flex flex-column">
-                                        <form method="get" action="{{ route('cashdesk.order.addtoorder', $result->id) }}" class="ml-auto">
-                                            <label >
-                                                {{ $result->name }} {{$result->menu_code}}- €{{ $result->price }}
-                                            </label>
-                                            <input type="number" name="quantities[{{ $result->id }}]" value="1" min="1" style="width: 40px;" class="mb-2">
-                                            @csrf
-                                            <button type="submit" class="btn btn-success ">Voeg toe</button>
-                                        </form>
+                            <div class="card bg-light border border-2 mb-4 mt-4 p-3">
+                                @foreach ($searchResult as $result)
+                                    <div class="card mb-3">
+                                        <div class="card-body d-flex justify-content-between">
+                                            <form method="get" action="{{ route('cashdesk.order.addtoorder', $result->id) }}">
+                                                <label>
+                                                    {{ $result->name }}
+                                                </label>
+                                                <label>
+                                                    {{$result->menu_code}}
+                                                </label>
+                                                <label>
+                                                    €{{ $result->price }}
+                                                </label>
+                                                <input type="number" name="quantities[{{ $result->id }}]" value="1" min="1" style="width: 40px;">
+                                                <input type="text" name="comment[{{ $result->id }}]" placeholder="">
+                                                @csrf
+                                                <button type="submit" class="btn btn-success">Voeg toe</button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         @endif
 
-
-                    @foreach($dishes as $dish)
+                        @foreach($dishes as $dish)
                             <div class="card mb-3">
-                                <div class="card-body d-flex flex-column">
-                                    <form method="get" action="{{ route('cashdesk.order.addtoorder', $dish->id) }}">
-                                        <label class="mb-auto">
-                                            {{ $dish->name }} - {{$dish->menu_code}} {{$dish->menu_code_addition}} - €{{ $dish->price }}
+                                <div class="card-body d-flex justify-content-between">
+                                    <form  method="get" action="{{ route('cashdesk.order.addtoorder', $dish->id) }}">
+                                        <label>
+                                            {{ $dish->name }}
                                         </label>
-                                        <input type="number" name="quantities[{{ $dish->id }}]" value="1" min="1" style="width: 40px;" class="mb-2">
+                                        <label>
+                                            {{$dish->menu_code}} {{$dish->menu_code_addition}}
+                                        </label>
+                                        <label>
+                                            €{{ $dish->price }}
+                                        </label>
+                                        <input type="number" name="quantities[{{ $dish->id }}]" value="1" min="1" style="width: 40px;">
                                         @csrf
-                                        <button type="submit" class="btn btn-primary ml-auto">Voeg toe</button>
+                                        <input type="text" name="comment[{{ $dish->id }}]" placeholder="">
+                                        <button type="submit" class="btn btn-primary">Voeg toe</button>
                                     </form>
                                 </div>
                             </div>
                         @endforeach
+
                     </div>
                 </div>
             </div>
@@ -66,7 +82,7 @@
                         <h2>Bestelling</h2>
                         @foreach($order as $orderItem)
                             <div class="order-item">
-                                <p> {{ $orderItem['name'] }} - {{$orderItem['menu_code'] }} {{$orderItem['menu_code_addition'] }} - €{{ $orderItem['price'] }} x {{ $orderItem['amount'] }}</p>
+                                <p> {{ $orderItem['name'] }} - {{$orderItem['menu_code'] }} {{$orderItem['menu_code_addition'] }} - €{{ $orderItem['price'] }} x {{ $orderItem['amount'] }} {{$orderItem['comment']}} </p>
                             </div>
                         @endforeach
                     </div>

@@ -63,7 +63,7 @@
     margin-top: 0px;
 }
 
-.itemToSelectTable, .itemSelectedTable, .itemSelectedTotalTable {
+.itemToSelectTable, .ml-autoitemSelectedTable, .itemSelectedTotalTable {
     width: 100%;
 }
 

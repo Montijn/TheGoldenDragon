@@ -67,6 +67,7 @@ class CashDeskController extends Controller
                 'name' => $menuItem->name,
                 'price' => $menuItem->price,
                 'amount' => $request->input("quantities.$dishId", 1),
+                'comment' => $request->input("comment.$dishId", " "),
                 'menu_code' =>$menuItem->menu_code,
                 'menu_code_addition' =>$menuItem->menu_code_addition
             ];
@@ -85,7 +86,8 @@ class CashDeskController extends Controller
             $menuItem = MenuItem::find($orderItem['id']);
             $newOrder->menuItemsInOrder()->attach($menuItem->id, [
                 'amount' => $orderItem['amount'],
-                'price' => $orderItem['price']
+                'price' => $orderItem['price'],
+                'comment' => $orderItem['comment']
             ]);
         }
         $newOrder->save();

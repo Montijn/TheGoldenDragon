@@ -18,6 +18,6 @@ class Order extends Model
     public function menuItemsInOrder()
     {
         return $this->belongsToMany(MenuItem::class, 'orders_has_menu_items', 'orders_id', 'menu_items_id')
-            ->withPivot('amount', 'price');
+            ->withPivot('amount', 'price', 'comment');
     }
 }
