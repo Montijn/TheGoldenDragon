@@ -15,25 +15,44 @@ class CashDeskController extends Controller
         return view("cashdesk.cashdesk");
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        $searchResult = MenuItem::query()
+            ->where('name', 'LIKE', "%{$search}%")
+            ->orWhere('menu_code', 'LIKE', "%{$search}%")
+            ->get();
+
+        // Store search term and results in the session
+        $request->session()->put('searchTerm', $search);
+        $request->session()->put('searchResult', $searchResult);
+
+        return redirect()->route('cashdesk.order.create');
+    }
+
     public function orderCreate(Request $request)
     {
-        $dishes = MenuItem::orderBy("dish_type", "ASC")->get();
+        $sortBy = $request->input('sortBy', 'dish_type');
+        $dishesQuery = MenuItem::orderBy($sortBy, 'ASC');
+        $dishes = $dishesQuery->get();
         $order = unserialize($request->cookie('order', 'a:0:{}'));
         $total = 0;
 
-        $searchTerm = $request->input('search', '');
-        $searchResult = collect([]);
-        if ($searchTerm) {
-            $searchResult = $dishes->where('name', 'like', '%' . $searchTerm . '%');
-        }
+        $searchTerm = $request->session()->get('searchTerm', '');
+        $searchResult = $request->session()->get('searchResult', collect([]));
+
         if ($order != null) {
             foreach ($order as $orderItem) {
                 $total += $orderItem['price'] * $orderItem['amount'];
             }
         }
+        $dishes = $dishes->diff($searchResult);
+        $request->session()->forget(['searchTerm', 'searchResult']);
 
-        return view('cashdesk.order.create', compact('dishes', 'order', 'total', 'searchTerm', 'searchResult'));
+        return view('cashdesk.order.create', compact('dishes', 'order', 'total', 'searchTerm', 'searchResult', 'sortBy'));
     }
+
     public function addToOrder(Request $request, $dishId)
     {
         $order = unserialize($request->cookie('order', 'a:0:{}'));
@@ -48,6 +67,8 @@ class CashDeskController extends Controller
                 'name' => $menuItem->name,
                 'price' => $menuItem->price,
                 'amount' => $request->input("quantities.$dishId", 1),
+                'menu_code' =>$menuItem->menu_code,
+                'menu_code_addition' =>$menuItem->menu_code_addition
             ];
         }
 

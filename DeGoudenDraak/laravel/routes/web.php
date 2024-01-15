@@ -39,6 +39,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/cashdesk', [CashDeskController::class, 'index']);
 Route::get('/cashdesk/order/create', [CashDeskController::class, 'orderCreate'])->name('cashdesk.order.create');
+Route::get('/cashdesk/order/search', [CashDeskController::class, 'search'])->name('cashdesk.order.search');
 Route::get('/cashdesk/order/create/{menuItemId}', [CashDeskController::class, 'addToOrder'])->name('cashdesk.order.addtoorder');
 Route::post('/cashdesk/order/create', [CashDeskController::class, 'orderStore'])->name('cashdesk.order.store');
 
