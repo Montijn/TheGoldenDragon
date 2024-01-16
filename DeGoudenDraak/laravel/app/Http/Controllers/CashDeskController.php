@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DishType;
 use App\Models\Order;
 use Illuminate\Support\Facades\Cookie;
 use App\Models\MenuItem;
@@ -33,6 +32,7 @@ class CashDeskController extends Controller
 
     public function orderCreate(Request $request)
     {
+        /*Cookie::queue(Cookie::forget('order'));*/
         $sortBy = $request->input('sortBy', 'dish_type');
         $dishesQuery = MenuItem::orderBy($sortBy, 'ASC');
         $dishes = $dishesQuery->get();
@@ -44,7 +44,9 @@ class CashDeskController extends Controller
 
         if ($order != null) {
             foreach ($order as $orderItem) {
-                $total += $orderItem['price'] * $orderItem['amount'];
+                $itemPrice = $orderItem['hasSpecialOffer'] ? $orderItem['getDiscountedPrice'] : $orderItem['price'];
+
+                $total += $itemPrice * $orderItem['amount'];
             }
         }
         $dishes = $dishes->diff($searchResult);
@@ -69,7 +71,9 @@ class CashDeskController extends Controller
                 'amount' => $request->input("quantities.$dishId", 1),
                 'comment' => $request->input("comment.$dishId", " "),
                 'menu_code' =>$menuItem->menu_code,
-                'menu_code_addition' =>$menuItem->menu_code_addition
+                'menu_code_addition' =>$menuItem->menu_code_addition,
+                'hasSpecialOffer' => $menuItem->hasSpecialOffer(),
+                'getDiscountedPrice' => $menuItem->getDiscountedPrice(),
             ];
         }
 
@@ -80,18 +84,26 @@ class CashDeskController extends Controller
     public function orderStore(Request $request)
     {
         $newOrder = Order::create();
-        $newOrder -> save();
+        $newOrder->save();
         $order = unserialize($request->cookie('order', 'a:0:{}'));
+
         foreach ($order as $orderItem) {
             $menuItem = MenuItem::find($orderItem['id']);
+
+            $price = $orderItem['hasSpecialOffer']
+                ? $orderItem['getDiscountedPrice']
+                : $orderItem['price'];
+
             $newOrder->menuItemsInOrder()->attach($menuItem->id, [
                 'amount' => $orderItem['amount'],
-                'price' => $orderItem['price'],
+                'price' => $price,
                 'comment' => $orderItem['comment']
             ]);
         }
+
         $newOrder->save();
         return redirect('/cashdesk')->withCookie(Cookie::forget('order'));
     }
+
 
 }

@@ -11,8 +11,8 @@ class RiceChoice extends Model
         'name', 'extra_price'
     ];
 
-    public function Special_Offers()
+ /*   public function Special_Offers()
     {
         return $this->belongsTo(SpecialOffer::class, 'rice_choice_id');
-    }
+    }*/
 }

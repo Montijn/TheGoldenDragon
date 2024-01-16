@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CashDeskController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SpecialOfferController;
 use App\Http\Livewire\CashDesk;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
@@ -42,6 +43,11 @@ Route::get('/cashdesk/order/create', [CashDeskController::class, 'orderCreate'])
 Route::get('/cashdesk/order/search', [CashDeskController::class, 'search'])->name('cashdesk.order.search');
 Route::get('/cashdesk/order/create/{menuItemId}', [CashDeskController::class, 'addToOrder'])->name('cashdesk.order.addtoorder');
 Route::post('/cashdesk/order/create', [CashDeskController::class, 'orderStore'])->name('cashdesk.order.store');
+
+Route::get('/specialoffers', [SpecialOfferController::class, 'index'])->name('specialoffers.index');
+Route::get('/specialoffers/create', [SpecialOfferController::class, 'create'])->name('specialoffers.create');
+Route::post('/specialoffers', [SpecialOfferController::class, 'store'])->name('specialoffers.store');
+
 
 Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
 Route::post('/news', [NewsController::class, 'store'])->name('news.store');

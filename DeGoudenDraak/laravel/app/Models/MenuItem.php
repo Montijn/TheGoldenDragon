@@ -21,8 +21,19 @@ class MenuItem extends Model
         return $this->belongsTo(DishType::class, 'dish_type');
     }
 
-    public function Special_Offers()
+    public function specialOffer()
     {
-        return $this->belongsToMany(SpecialOffer::class);
+        return $this->belongsToMany(SpecialOffer::class, 'special_offers_has_menu_items', 'menu_items_id', 'special_offers_id');
+    }
+
+    public function hasSpecialOffer()
+    {
+        return $this->specialOffer()->exists();
+    }
+
+    public function getDiscountedPrice()
+    {
+
+        return $this->price - $this->specialOffer()->first()->price;
     }
 }

@@ -18,8 +18,10 @@ class CreateSpecialOffersTable extends Migration
             $table->string('name', 45);
             $table->string('description', 200);
             $table->double('price');
-            $table->unsignedBigInteger('rice_choice_id');
-            $table->foreign('rice_choice_id')->references('id')->on('rice_choice');
+            $table->timestamp('expires_at')->default(now()->addWeek());
+/*            $table->unsignedBigInteger('rice_choice_id');
+            $table->foreign('rice_choice_id')->references('id')->on('rice_choice');*/
+            $table->timestamps();
         });
     }
 

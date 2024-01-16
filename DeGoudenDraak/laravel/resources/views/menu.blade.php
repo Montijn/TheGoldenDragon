@@ -22,7 +22,13 @@
                 <td>{{ $menuItem->menu_code }} {{ $menuItem->menu_code_addition }}</td>
                 <td>{{ $menuItem->name }}</td>
                 <td>{{ $menuItem->description }}</td>
-                <td>€ {{ $menuItem->price }}</td>
+                <td>
+                    @if($menuItem->hasSpecialOffer())
+                        <del>€ {{ number_format($menuItem->price, 2) }}</del> <p>€ {{ number_format($menuItem->getDiscountedPrice(), 2) }}</p>
+                    @else
+                        € {{ number_format($menuItem->price, 2) }}
+                    @endif
+                </td>
                 <td>
                     @if(in_array($menuItem->id, $favorites))
                         <a href="{{ route('favorite.remove', $menuItem->id) }}">

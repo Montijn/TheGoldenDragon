@@ -62,7 +62,11 @@
                                             {{$dish->menu_code}} {{$dish->menu_code_addition}}
                                         </label>
                                         <label>
-                                            €{{ $dish->price }}
+                                            @if($dish->hasSpecialOffer())
+                                                <del>€{{ number_format($dish->price, 2) }}</del> €{{ number_format($dish->getDiscountedPrice(), 2) }}
+                                            @else
+                                                €{{ number_format($dish->price, 2) }}
+                                            @endif
                                         </label>
                                         <input type="number" name="quantities[{{ $dish->id }}]" value="1" min="1" style="width: 40px;">
                                         @csrf
@@ -82,7 +86,16 @@
                         <h2>Bestelling</h2>
                         @foreach($order as $orderItem)
                             <div class="order-item">
-                                <p> {{ $orderItem['name'] }} - {{$orderItem['menu_code'] }} {{$orderItem['menu_code_addition'] }} - €{{ $orderItem['price'] }} x {{ $orderItem['amount'] }} {{$orderItem['comment']}} </p>
+                                <p>
+                                    {{ $orderItem['name'] }} - {{$orderItem['menu_code'] }} {{$orderItem['menu_code_addition'] }}
+                                    -
+                                    @if($orderItem['hasSpecialOffer'])
+                                        <del>€ {{ number_format($orderItem['price'], 2) }}</del> € {{ number_format($orderItem['getDiscountedPrice'], 2) }}
+                                    @else
+                                        € {{ number_format($orderItem['price'], 2) }}
+                                    @endif
+                                    x {{ $orderItem['amount'] }} {{ $orderItem['comment'] }}
+                                </p>
                             </div>
                         @endforeach
                     </div>
