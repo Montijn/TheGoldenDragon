@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\View\View;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class MenuController extends Controller
 {
@@ -19,6 +20,15 @@ class MenuController extends Controller
         $favorites = unserialize($request->cookie('favorites', 'a:0:{}'));
 
         return view('menu/index', compact('menuItems', 'favorites'));
+    }
+
+    public function download()
+    {
+        $dishes = MenuItem::all();
+
+        $html = view('pdf/index', compact('dishes'))->render();
+
+        return PDF::loadHTML($html)->download('GoudenDraak_Menu.pdf');
     }
 
     /**

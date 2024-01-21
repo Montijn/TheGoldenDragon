@@ -4,7 +4,7 @@
     <link rel='stylesheet' type='text/css' href="{{ asset('/css/menu.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <a href="{{ route('favorites') }}">My Favorites</a>
-
+    <a href="{{ route('pdf') }}" class="btn btn-success">Download Menu PDF</a>
     @if(auth()->user() && auth()->user()->is_Admin == 1)
         <div class="admin-buttons">
             <a href="{{ route('menu.create') }}" class="btn btn-primary">Nieuw</a>

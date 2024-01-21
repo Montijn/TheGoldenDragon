@@ -45,7 +45,7 @@ Route::resource('menu', MenuController::class);
 
 Route::resource('specialoffers', SpecialOfferController::class);
 
-
+Route::get('/pdf', [MenuController::class, 'download'])->name('pdf');
 
 Route::get('/cashdesk', [CashDeskController::class, 'index'])->name('cashdesk');
 Route::get('/cashdesk/order/index', [CashDeskController::class, 'orderOverview'])->name('cashdesk.order.index');
