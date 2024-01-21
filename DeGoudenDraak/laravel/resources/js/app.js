@@ -22,6 +22,7 @@ import Vue from 'vue';
 
 Vue.component('example', require('./components/ExampleComponent.vue').default);
 Vue.component('create-order', require('./components/CreateOrder.vue').default);
+Vue.component('favorite-menu-items', require('./components/FavoriteMenuItems.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -64,6 +64,9 @@
                                     <button type="button" class="btn btn-secondary">
                                         <a href="{{ route('cashdesk') }}" class="nav-link">Kassa</a>
                                     </button>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="{{ route('schedules.index') }}" class="nav-link">Planning</a>
+                                    </button>
                                 @endauth
                             </div>
                         </div>
@@ -80,7 +83,7 @@
         </div>
         @yield('content')
     </div>
-
+    <script src="{{ mix('js/app.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
 </html>

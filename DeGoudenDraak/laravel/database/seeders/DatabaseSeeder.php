@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TableSeeder::class,
             GuestSeeder::class,
-            NewsTableSeeder::class
+            NewsTableSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

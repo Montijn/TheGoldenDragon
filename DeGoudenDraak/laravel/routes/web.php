@@ -35,32 +35,30 @@ Route::get('/favorites', [MenuController::class, 'getFavorites'])->name('favorit
 Route::get('/favorite/remove/{menuItemId}', [MenuController::class, 'removeFavorite'])->name('favorite.remove');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/notification', [NotificationController::class, 'create'])->name('notification');
-Route::delete('/cashdesk/notifications/{id}', [NotificationController::class, 'destroy'])->name('notification.destroy');
-
-Route::resource('tables', TableController::class);
-
-Route::resource('news', NewsController::class);
-
-Route::resource('guests', GuestController::class);
-
-Route::resource('menu', MenuController::class);
-
-Route::resource('specialoffers', SpecialOfferController::class);
-
-Route::resource('schedules', ScheduleController::class);
-
+Route::post('/notification', [NotificationController::class, 'store'])->name('notification.store');
 Route::get('/pdf', [MenuController::class, 'download'])->name('pdf');
 
-Route::get('/cashdesk', [CashDeskController::class, 'index'])->name('cashdesk');
-Route::get('/cashdesk/order/index', [CashDeskController::class, 'orderOverview'])->name('cashdesk.order.index');
-Route::get('/cashdesk/order/create', [CashDeskController::class, 'orderCreate'])->name('cashdesk.order.create');
-Route::get('/cashdesk/order/search', [CashDeskController::class, 'search'])->name('cashdesk.order.search');
-Route::get('/cashdesk/order/create/{menuItemId}', [CashDeskController::class, 'addToOrder'])->name('cashdesk.order.addtoorder');
-Route::post('/cashdesk/order/create', [CashDeskController::class, 'orderStore'])->name('cashdesk.order.store');
-Route::get('/cashdesk/notifications', [NotificationController::class, 'index'])->name('cashdesk.notifications');
-Route::post('/notification', [NotificationController::class, 'store'])->name('notification.store');
+Route::resource('news', NewsController::class)->only(['index']);
+Route::resource('menu', MenuController::class)->only(['index']);
+Route::resource('specialoffers', SpecialOfferController::class)->only(['index']);
 
 
+Route::middleware(['auth'])->group(function () {
+    Route::resource('guests', GuestController::class);
+    Route::resource('tables', TableController::class);
+    Route::resource('schedules', ScheduleController::class);
+    Route::get('/cashdesk', [CashDeskController::class, 'index'])->name('cashdesk');
+    Route::get('/cashdesk/order/index', [CashDeskController::class, 'orderOverview'])->name('cashdesk.order.index');
+    Route::get('/cashdesk/order/create', [CashDeskController::class, 'orderCreate'])->name('cashdesk.order.create');
+    Route::get('/cashdesk/order/search', [CashDeskController::class, 'search'])->name('cashdesk.order.search');
+    Route::get('/cashdesk/order/create/{menuItemId}', [CashDeskController::class, 'addToOrder'])->name('cashdesk.order.addtoorder');
+    Route::post('/cashdesk/order/create', [CashDeskController::class, 'orderStore'])->name('cashdesk.order.store');
+    Route::get('/cashdesk/notifications', [NotificationController::class, 'index'])->name('cashdesk.notifications');
+    Route::delete('/cashdesk/notifications/{id}', [NotificationController::class, 'destroy'])->name('notification.destroy');
+    Route::resource('menu', MenuController::class)->except(['index']);
+    Route::resource('news', NewsController::class)->except(['index']);
+    Route::resource('specialoffers', MenuController::class)->except(['index']);
+});
 
 
 

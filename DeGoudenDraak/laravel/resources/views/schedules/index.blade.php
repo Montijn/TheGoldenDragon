@@ -1,7 +1,7 @@
 @extends('website.layouts.website-layout')
 
 @section('content')
-    <h1>Schedules</h1>
+    <h1>Planning</h1>
 
     <a href="{{ route('schedules.create') }}" class="btn btn-primary">Maak Planning</a>
 

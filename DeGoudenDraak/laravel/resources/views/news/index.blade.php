@@ -1,6 +1,6 @@
 @extends('website.layouts.website-layout')
 @section('content')
-    <h1>Latest News</h1>
+    <h1>Laatste Nieuws</h1>
 
     @if(Auth::check() && Auth::user()->is_Admin == 1)
         <div>
