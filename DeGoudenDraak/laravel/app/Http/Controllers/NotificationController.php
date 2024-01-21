@@ -26,4 +26,12 @@ class NotificationController extends Controller
         $notification->save();
         return redirect()->route('notification');
     }
+
+    public function destroy($id)
+    {
+        $notification = Notification::find($id);
+        $notification->delete();
+
+        return redirect()->route('cashdesk.notifications')->with('success', 'Notification deleted successfully.');
+    }
 }

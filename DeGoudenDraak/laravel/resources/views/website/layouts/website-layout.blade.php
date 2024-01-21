@@ -51,6 +51,9 @@
                                 <button type="button" class="btn btn-secondary">
                                     <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                                 </button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ route('notification') }}" class="nav-link">Tafel Hulp</a>
+                                </button>
                                 @auth
                                     <button type="button" class="btn btn-secondary">
                                         <a href="{{ route('tables.index') }}" class="nav-link">Tafels</a>

@@ -15,4 +15,9 @@ class Table extends Model
     {
         return $this->hasMany(Guest::class);
     }
+
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class);
+    }
 }

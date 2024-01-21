@@ -4,6 +4,7 @@ use App\Http\Controllers\CashDeskController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SpecialOfferController;
 use App\Http\Controllers\TableController;
 use App\Http\Livewire\CashDesk;
@@ -34,6 +35,7 @@ Route::get('/favorites', [MenuController::class, 'getFavorites'])->name('favorit
 Route::get('/favorite/remove/{menuItemId}', [MenuController::class, 'removeFavorite'])->name('favorite.remove');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/notification', [NotificationController::class, 'create'])->name('notification');
+Route::delete('/cashdesk/notifications/{id}', [NotificationController::class, 'destroy'])->name('notification.destroy');
 
 Route::resource('tables', TableController::class);
 
@@ -44,6 +46,8 @@ Route::resource('guests', GuestController::class);
 Route::resource('menu', MenuController::class);
 
 Route::resource('specialoffers', SpecialOfferController::class);
+
+Route::resource('schedules', ScheduleController::class);
 
 Route::get('/pdf', [MenuController::class, 'download'])->name('pdf');
 
