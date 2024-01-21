@@ -105,5 +105,11 @@ class CashDeskController extends Controller
         return redirect('/cashdesk')->withCookie(Cookie::forget('order'));
     }
 
+    public function orderOverview(){
+
+        $orders = Order::all();
+        return view('cashdesk.order.index', compact('orders'));
+    }
+
 
 }

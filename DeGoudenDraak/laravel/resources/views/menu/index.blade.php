@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <a href="{{ route('favorites') }}">My Favorites</a>
 
+    @if(auth()->user() && auth()->user()->is_Admin == 1)
+        <div class="admin-buttons">
+            <a href="{{ route('menu.create') }}" class="btn btn-primary">Nieuw</a>
+        </div>
+    @endif
+
     <table class="table">
         <thead>
         <tr>
@@ -13,6 +19,9 @@
             <th>Naam</th>
             <th>Beschrijving</th>
             <th>Prijs</th>
+            @if(auth()->user() && auth()->user()->is_Admin == 1)
+                <th>Actions</th>
+            @endif
         </tr>
         </thead>
         <tbody>
@@ -40,6 +49,16 @@
                         </a>
                     @endif
                 </td>
+                @if(auth()->user() && auth()->user()->is_Admin == 1)
+                    <td>
+                        <a href="{{ route('menu.edit', $menuItem->id) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('menu.destroy', $menuItem->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Verwijder</button>
+                        </form>
+                    </td>
+                @endif
             </tr>
         @endforeach
         </tbody>

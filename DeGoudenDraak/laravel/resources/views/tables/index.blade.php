@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <h2>Tables</h2>
-        <a href="{{ route('tables.create') }}" class="btn btn-primary mb-3">Create Table</a>
+        <a href="{{ route('tables.create') }}" class="btn btn-primary mb-3">Nieuwe Tafel</a>
 
         @if(session('success'))
             <div class="alert alert-success">
@@ -13,8 +13,8 @@
         <table class="table">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Seats</th>
+                <th>Tafelnummer</th>
+                <th>Zitplaatsen</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -28,7 +28,7 @@
                         <form action="{{ route('tables.destroy', $table->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Verwijder</button>
                         </form>
                     </td>
                 </tr>

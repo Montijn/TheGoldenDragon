@@ -1,18 +1,24 @@
 @extends('website.layouts.website-layout')
 
 @section('content')
-    <h1>Edit News Item</h1>
+    <div class="container mt-4">
+        <h1>Edit Nieuws Artikel</h1>
 
-    <form action="{{ route('news.update', $newsItem->id) }}" method="post">
-        @csrf
-        @method('PATCH')
+        <form action="{{ route('news.update', $newsItem->id) }}" method="post">
+            @csrf
+            @method('PATCH')
 
-        <label for="title">Title:</label>
-        <input type="text" name="title" value="{{ $newsItem->title }}" required>
+            <div class="mb-3">
+                <label for="title" class="form-label">Titel:</label>
+                <input type="text" class="form-control" name="title" value="{{ $newsItem->title }}" required>
+            </div>
 
-        <label for="content">Content:</label>
-        <textarea name="content" required>{{ $newsItem->content }}</textarea>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content:</label>
+                <textarea class="form-control" name="content" required>{{ $newsItem->content }}</textarea>
+            </div>
 
-        <button type="submit">Update News Item</button>
-    </form>
+            <button type="submit" class="btn btn-primary">Update nieuws artikel</button>
+        </form>
+    </div>
 @endsection

@@ -6,7 +6,7 @@
 
 @section('content')
     <div id="app">
-        Test
+        Welkom bij het kassa systeem!
     </div>
 
 {{--    <div>

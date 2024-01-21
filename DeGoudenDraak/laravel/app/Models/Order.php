@@ -20,4 +20,10 @@ class Order extends Model
         return $this->belongsToMany(MenuItem::class, 'orders_has_menu_items', 'orders_id', 'menu_items_id')
             ->withPivot('amount', 'price', 'comment');
     }
+    public function getTotalPriceAttribute()
+    {
+        return $this->menuItemsInOrder->sum(function ($item) {
+            return $item->pivot->amount * $item->pivot->price;
+        });
+    }
 }

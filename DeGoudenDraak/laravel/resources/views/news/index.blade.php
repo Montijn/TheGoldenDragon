@@ -4,7 +4,7 @@
 
     @if(Auth::check() && Auth::user()->is_Admin == 1)
         <div>
-            <a href="{{ route('news.create') }}" class="btn btn-success">Create News</a>
+            <a href="{{ route('news.create') }}" class="btn btn-success">Maak nieuws artikel</a>
         </div>
     @endif
 
@@ -20,7 +20,7 @@
                     <form action="{{ route('news.destroy', $article->id) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Verwijder</button>
                     </form>
                 </div>
             @endif

@@ -36,20 +36,32 @@
                             </div>
                             <div class="btn-group btn-group-sm" role="group">
                                 <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('menu') }}" class="nav-link">Menukaart</a>
+                                    <a href="{{ route('home') }}" class="nav-link">Home</a>
                                 </button>
                                 <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('news.index') }}" class="nav-link">Nieuws</a>
+                                    <a href="{{ route('menu.index') }}" class="nav-link">Menukaart</a>
                                 </button>
                                 <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('tables.index') }}" class="nav-link">Tafels</a>
+                                    <a href="{{ route('news.index') }}" class="nav-link">Nieuws</a>
+                                </button>
+
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ route('specialoffers.index') }}" class="nav-link">Acties!</a>
                                 </button>
                                 <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('guests.index') }}" class="nav-link">Gasten</a>
+                                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                                 </button>
-                                <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('contact') }}" class="nav-link">Contact</a>
-                                </button>
+                                @auth
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="{{ route('tables.index') }}" class="nav-link">Tafels</a>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="{{ route('guests.index') }}" class="nav-link">Gasten</a>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="{{ route('cashdesk') }}" class="nav-link">Kassa</a>
+                                    </button>
+                                @endauth
                             </div>
                         </div>
                         <div class="col-lg-2">

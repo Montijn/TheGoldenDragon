@@ -18,7 +18,7 @@ class MenuController extends Controller
         $menuItems = MenuItem::orderBy("dish_type", "ASC")->get();
         $favorites = unserialize($request->cookie('favorites', 'a:0:{}'));
 
-        return view('menu', compact('menuItems', 'favorites'));
+        return view('menu/index', compact('menuItems', 'favorites'));
     }
 
     /**
@@ -28,7 +28,7 @@ class MenuController extends Controller
      */
     public function create(){
         $dishtypes = DishType::all();
-        return view('addmenuitem', compact('dishtypes'));
+        return view('menu/create', compact('dishtypes'));
     }
 
     /**
@@ -49,7 +49,7 @@ class MenuController extends Controller
             ->update([
                 'dish_type' => $request->input("dishtype")
             ]);
-        return redirect('/menu');
+        return redirect()->route('menu.index');
     }
     public function addFavorite($menuItemId, Request $request)
     {
@@ -58,7 +58,7 @@ class MenuController extends Controller
         $favorites[] = $menuItem->id;
         $serializedFavorites = serialize($favorites);
 
-        return redirect('/menu')->withCookie(Cookie::forever('favorites', $serializedFavorites));
+        return redirect()->route('menu.index')->withCookie(Cookie::forever('favorites', $serializedFavorites));
     }
 
     public function getFavorites(Request $request)
@@ -85,5 +85,58 @@ class MenuController extends Controller
 
         return redirect('/menu')->withCookie(cookie()->forever('favorites', $serializedFavorites));
     }
+
+    public function edit($menuItemId)
+    {
+        $menuItem = MenuItem::find($menuItemId);
+        $dishtypes = DishType::all();
+
+        return view('menu/edit', compact('menuItem', 'dishtypes'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param $menuItemId
+     * @return RedirectResponse|Redirector
+     */
+    public function update(Request $request, $menuItemId)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'menu-code' => 'required',
+            'menu-code-addition' => 'required',
+            'dishtype' => 'required',
+        ]);
+
+        MenuItem::where('id', $menuItemId)
+            ->update([
+                'name' => $request->input('name'),
+                'description' => $request->input('description'),
+                'price' => $request->input('price'),
+                'menu_code' => $request->input('menu-code'),
+                'menu_code_addition' => $request->input('menu-code-addition'),
+                'dish_type' => $request->input('dishtype'),
+            ]);
+
+        return redirect()->route('menu.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param $menuItemId
+     * @return RedirectResponse|Redirector
+     */
+    public function destroy($menuItemId)
+    {
+        MenuItem::destroy($menuItemId);
+
+        return redirect('/menu');
+    }
+
 
 }

@@ -7,7 +7,7 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="seats">Seats:</label>
+                <label for="seats">Zitplaatsen:</label>
                 <input type="number" class="form-control" id="seats" name="seats" value="{{ $table->seats }}" required>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>

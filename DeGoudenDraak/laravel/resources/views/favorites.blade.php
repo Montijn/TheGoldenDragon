@@ -7,7 +7,7 @@
         <div>
             <p>{{ $favoriteMenuItem->name }}</p>
             <p>{{ $favoriteMenuItem->description }}</p>
-            <p>Price: € {{ $favoriteMenuItem->price }}</p>
+            <p>Prijs: € {{ $favoriteMenuItem->price }}</p>
         </div>
         <hr>
     @empty

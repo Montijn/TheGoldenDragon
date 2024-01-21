@@ -33,7 +33,12 @@ class MenuItem extends Model
 
     public function getDiscountedPrice()
     {
+        $specialOffer = $this->specialOffer()->first();
 
-        return $this->price - $this->specialOffer()->first()->price;
+        if ($specialOffer) {
+            return $this->price - $specialOffer->price;
+        }
+
+        return $this->price;
     }
 }

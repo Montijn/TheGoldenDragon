@@ -10,9 +10,9 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Number</th>
-                <th>Table</th>
-                <th>Time</th>
+                <th>Nummer</th>
+                <th>Tafel</th>
+                <th>Tijd</th>
             </tr>
             </thead>
             <tbody>

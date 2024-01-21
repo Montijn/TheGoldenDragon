@@ -19,7 +19,7 @@
                 </form>
             </div>
             <div class="list-inline-item">
-                <form action="{{route('logout')}}" method="GET">
+                <form action="{{route('cashdesk.order.index')}}" method="GET">
                     @csrf
                 <button id='salesBtn' class='menuButton'>
                     Verkoop Overzicht

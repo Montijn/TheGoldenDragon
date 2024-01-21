@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2>Guests</h2>
-        <a href="{{ route('guests.create') }}" class="btn btn-primary mb-3">Create Guest</a>
+        <a href="{{ route('guests.create') }}" class="btn btn-primary mb-3">Nieuwe gast</a>
 
         <table class="table">
             <thead>
@@ -28,7 +28,7 @@
                         <form action="{{ route('guests.destroy', $guest->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Verwijder</button>
                         </form>
                     </td>
                 </tr>

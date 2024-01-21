@@ -1,17 +1,22 @@
 @extends('website.layouts.website-layout')
-
 @section('content')
-    <h1>Nieuw nieuws artikel</h1>
+    <div class="container mt-4">
+        <h1>Nieuw nieuws artikel</h1>
 
-    <form method="POST" action="{{ route('news.store') }}">
-        @csrf
+        <form method="POST" action="{{ route('news.store') }}">
+            @csrf
 
-        <label for="title">Titel:</label>
-        <input type="text" name="title" required>
+            <div class="mb-3">
+                <label for="title" class="form-label">Titel:</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
 
-        <label for="content">Content:</label>
-        <textarea name="content" required></textarea>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content:</label>
+                <textarea class="form-control" name="content" required></textarea>
+            </div>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit" class="btn btn-primary">Sla op</button>
+        </form>
+    </div>
 @endsection

@@ -16,13 +16,13 @@
                         <form method="get" action="{{ route('cashdesk.order.search') }}" class="mb-3">
                             <div class="input-group">
                                 <input type="text" name="search" class="form-control" required/>
-                                <button type="submit" class="btn btn-primary">Search</button>
+                                <button type="submit" class="btn btn-primary">Zoek</button>
                             </div>
                         </form>
                         <div class=" mb-3">
                             <form method="get" action="{{ route('cashdesk.order.create') }}">
-                                <button type="submit" name="sortBy" value="dish_type" class="btn btn-link{{ $sortBy === 'dish_type' ? ' active' : '' }}">Sort by Dish Type</button>
-                                <button type="submit" name="sortBy" value="menu_code" class="btn btn-link{{ $sortBy === 'menu_code' ? ' active' : '' }}">Sort by Menu Code</button>
+                                <button type="submit" name="sortBy" value="dish_type" class="btn btn-link{{ $sortBy === 'dish_type' ? ' active' : '' }}">Soorteer per categorie</button>
+                                <button type="submit" name="sortBy" value="menu_code" class="btn btn-link{{ $sortBy === 'menu_code' ? ' active' : '' }}">Soorteer per menu code</button>
                             </form>
                         </div>
                         @if($searchResult->isNotEmpty())
