@@ -8,12 +8,12 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::latest()->get();
-        return view('news', compact('news'));
+        return view('news/index', compact('news'));
     }
 
     public function create()
     {
-        return view('create-news');
+        return view('news/create');
     }
     public function store(Request $request)
     {
@@ -27,13 +27,13 @@ class NewsController extends Controller
             'content' => $request->input('content'),
         ]);
 
-        return redirect('/news')->with('success', 'News item created successfully.');
+        return redirect()->route('news.index')->with('success', 'News item created successfully.');
     }
 
     public function edit($id)
     {
         $newsItem = News::findOrFail($id);
-        return view('edit-news', compact('newsItem'));
+        return view('news/edit', compact('newsItem'));
     }
 
     public function update(Request $request, $id)
@@ -50,7 +50,7 @@ class NewsController extends Controller
             'content' => $request->input('content'),
         ]);
 
-        return redirect('/news')->with('success', 'News item updated successfully.');
+        return redirect()->route('news.index')->with('success', 'News item updated successfully.');
     }
 
     public function destroy($id)
@@ -58,6 +58,6 @@ class NewsController extends Controller
         $newsItem = News::findOrFail($id);
         $newsItem->delete();
 
-        return redirect('/news')->with('success', 'News item deleted successfully.');
+        return redirect()->route('news.index')->with('success', 'News item deleted successfully.');
     }
 }

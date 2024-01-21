@@ -39,7 +39,13 @@
                                     <a href="{{ Route('menu') }}" class="nav-link">Menukaart</a>
                                 </button>
                                 <button type="button" class="btn btn-secondary">
-                                    <a href="{{ Route('news') }}" class="nav-link">Nieuws</a>
+                                    <a href="{{ Route('news.index') }}" class="nav-link">Nieuws</a>
+                                </button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ Route('tables.index') }}" class="nav-link">Tafels</a>
+                                </button>
+                                <button type="button" class="btn btn-secondary">
+                                    <a href="{{ Route('guests.index') }}" class="nav-link">Gasten</a>
                                 </button>
                                 <button type="button" class="btn btn-secondary">
                                     <a href="{{ Route('contact') }}" class="nav-link">Contact</a>

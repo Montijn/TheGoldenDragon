@@ -16,11 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        User::create([
-            'email' => 'admin@gouden-draak.nl',
-            'password' => Hash::make('wachtwoord'),
-            'is_admin' => true,
+        $this->call([
+            TableSeeder::class,
+            GuestSeeder::class,
+            NewsTableSeeder::class
         ]);
     }
 }
